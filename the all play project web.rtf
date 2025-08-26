@@ -1,0 +1,75 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\
+  <title>Components JSON Viewer</title>\
+  <style>\
+    body \{ font-family: Arial, sans-serif; background: #f9fafb; margin: 0; padding: 2rem; \}\
+    h1 \{ color: #334155; \}\
+    .json-viewer \{\
+      background: #fff;\
+      border-radius: 8px;\
+      padding: 1rem;\
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);\
+      font-size: 1rem;\
+      margin-top: 1rem;\
+      overflow-x: auto;\
+      white-space: pre;\
+    \}\
+    a.project-link \{\
+      display: inline-block;\
+      margin: 1rem 0;\
+      padding: 0.5rem 1rem;\
+      background: #2563eb;\
+      color: #fff;\
+      border-radius: 4px;\
+      text-decoration: none;\
+      font-weight: bold;\
+      transition: background 0.2s;\
+    \}\
+    a.project-link:hover \{\
+      background: #1e40af;\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <h1>Components.json Viewer</h1>\
+  <a class="project-link" href="https://lovable.dev/projects/6e563b38-1106-4960-8f96-ff651e0d1b61" target="_blank">\
+    View Lovable Project\
+  </a>\
+  <div class="json-viewer" id="json-viewer"></div>\
+  <script>\
+    // Your JSON data\
+    const jsonData = \{\
+      "$schema": "https://ui.shadcn.com/schema.json",\
+      "style": "default",\
+      "rsc": false,\
+      "tsx": true,\
+      "tailwind": \{\
+        "config": "tailwind.config.ts",\
+        "css": "src/index.css",\
+        "baseColor": "slate",\
+        "cssVariables": true,\
+        "prefix": ""\
+      \},\
+      "aliases": \{\
+        "components": "@/components",\
+        "utils": "@/lib/utils",\
+        "ui": "@/components/ui",\
+        "lib": "@/lib",\
+        "hooks": "@/hooks"\
+      \}\
+    \};\
+    document.getElementById('json-viewer').innerText =\
+      JSON.stringify(jsonData, null, 2);\
+  </script>\
+</body>\
+</html>}
